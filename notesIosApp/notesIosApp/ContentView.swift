@@ -5,7 +5,11 @@ struct ContentView: View {
 	let greet = Greeting().greet()
 
 	var body: some View {
-		Text(greet)
+        Text(greet).onAppear(){
+            let factory = IOSSqlFactory()
+            let sdk = TestSdk(iSqlFactory: factory)
+            sdk.startTesting()
+        }
 	}
 }
 

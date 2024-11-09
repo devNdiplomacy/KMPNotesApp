@@ -8,7 +8,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.devndiplomacy.kmpnotesapp.AndroidSqlFactory
+import com.devndiplomacy.kmpnotesapp.AppContext
 import com.devndiplomacy.kmpnotesapp.Greeting
+import com.devndiplomacy.kmpnotesapp.TestSdk
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +23,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingView(Greeting().greet())
-
+                    AppContext.setAndroidContext(this)
+                    val a = AndroidSqlFactory(this)
+                    val sdk = TestSdk(a)
+                    sdk.startTesting()
                 }
             }
         }

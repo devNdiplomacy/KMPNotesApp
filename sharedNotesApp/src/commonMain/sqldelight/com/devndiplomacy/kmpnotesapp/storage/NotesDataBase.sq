@@ -1,0 +1,15 @@
+CREATE TABLE NOTE (
+    title TEXT NOT NULL,
+    body  TEXT NOT NULL,
+    createdTime INTEGER NOT NULL,
+    updatedTime INTEGER NOT NULL
+);
+
+
+insertNote:
+INSERT INTO NOTE(title, body, createdTime, updatedTime)
+VALUES(?, ?, ?, ?);
+
+selectAllNotesInfo:
+SELECT *
+FROM NOTE;
