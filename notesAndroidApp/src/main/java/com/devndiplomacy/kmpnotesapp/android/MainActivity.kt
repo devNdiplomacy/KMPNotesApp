@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingView(Greeting().greet())
-                    AppContext.setC(this)
+                    AppContext.setAndroidContext(this)
                     val a = AndroidSqlFactory(this)
                     val sdk = TestSdk(a)
                     sdk.startTesting()

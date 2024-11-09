@@ -11,4 +11,4 @@ class AndroidSqlFactory(private val context: Context): ISqlFactory {
 }
 
 
-actual fun getSqlFactory():ISqlFactory = AndroidSqlFactory(AppContext.getContext1())
+actual fun getSqlFactory():ISqlFactory = AndroidSqlFactory(AppContext.getAndroidContext())

@@ -5,6 +5,6 @@ class TestSdk(val iSqlFactory:ISqlFactory) {
 
     fun startTesting(){
         val d = DataBase(iSqlFactory)
-        d.createNote("Aryan","daaaece",1223,31341)
+        d.createNote("Liza","daaaece",1223,31341)
     }
 }
